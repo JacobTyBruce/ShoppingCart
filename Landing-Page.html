@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link type="text/css" rel="stylesheet" href="Shop.css">
+    </head>
+
+    <body onload="loadCheck();">
+        
+        <div id="gctnr">
+
+            <div class="item">
+                <h1> Item 1 </h1>
+                <button data-name="Item 1" data-price="5.99" onclick="addToCart(this);">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h1> Item 2 </h1>
+                <button data-name="Item 2" data-price="7.82" onclick="addToCart(this);">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h1> Item 3 </h1>
+                <button data-name="Item 3" data-price="4.29" onclick="addToCart(this);">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h1> Item 4 </h1>
+                <button data-name="Item 4" data-price="5.07" onclick="addToCart(this);">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div id="total">
+            
+            
+            <button onclick="saveCart();"> Save Cart</button>
+            <button onclick="viewCart();"> View Cart </button>
+            <button onclick="deleteCart();">Delete Cart</button>
+            <button onclick="getCarts();">Find Carts</button>
+        </div>
+
+        <div id="popup">
+            <div id="side1">
+                <p>Your Items</p>
+            </div>
+            <div id="side2">
+                <div id="closePopup" onclick="closePopup();">X</div>
+                <div style="text-align: center;">
+                    <h3> Total: </h3>
+                    <p id="totalAmount">$0.00</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="shop.js"></script>
+    </body>
+
+</html>
